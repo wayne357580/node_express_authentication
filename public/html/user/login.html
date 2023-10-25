@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../../css/external/mdb/mdb.min.css">
+    <link rel="stylesheet" href="../../css/external/fontawesome/all.min.css">
+    <link rel="stylesheet" href="../../css/user/login.css">
+</head>
+
+<body>
+    <div class="container text-center h-100">
+        <div class="row justify-content-center h-100">
+            <div class="col-10 col-md-8 col-lg-6 col-xl-4 bg-light align-self-center p-4 rounded-3 border shadow-5">
+                <h1 class="mb-4">Login</h1>
+                <hr class="mb-4">
+                <!-- 一般登入 -->
+                <div class="row" id="basicLoginPage">
+                    <div class="col-12 mb-3">
+                        <div class="form-outline">
+                            <input type="text" id="loginAct" class="form-control form-control-lg" />
+                            <label class="form-label" for="loginAct">帳號</label>
+                            <div class="invalid-feedback">請輸入帳號！</div>
+                        </div>
+                    </div>
+                    <div class="col-12 mb-3">
+                        <div class="form-outline">
+                            <input type="text" id="loginPwd" class="form-control form-control-lg" />
+                            <label class="form-label" for="loginPwd">密碼</label>
+                            <div class="invalid-feedback">請輸入密碼！</div>
+                        </div>
+                        <div id="infoDiv" class="mt-3 text-danger fw-bold d-none"></div>
+                    </div>
+                    <div class="col-12 mb-3">
+                        <button id="loginBtn" class="btn btn-primary btn-rounded w-100">登入</button>
+                    </div>
+                    <div class="col-12 mb-3">
+                        <button id="signupBtn" class="btn btn-danger btn-rounded w-100">註冊</button>
+                    </div>
+                    <div class="col-12">
+                        <button class="btn btn-outline-secondary btn-rounded w-100" id="goOtherLoginBtn">
+                            使用其他登入方式
+                        </button>
+                    </div>
+                </div>
+                <!-- 其他登入 -->
+                <div class="row d-none" id="otherLoginPage">
+                    <div class="col-12 mb-3">
+                        <a id='keyCloakLoginBtn' href="/user/keyCloak/login" class="btn btn-outline-secondary btn-rounded w-100">
+                            <img src="../../img/Keycloak-icon.png" class="float-start">
+                            Keycloak 登入
+                        </a>
+                    </div>
+                    <div class="col-12 mb-3">
+                        <a id='googleLoginBtn' href="/user/google/login" class="btn btn-outline-secondary btn-rounded w-100">
+                            <img src="../../img/google-icon.png" class="float-start">
+                            Google 登入
+                        </a>
+                    </div>
+                    <div class="col-12 mb-3">
+                        <a id='discordLoginBtn' href="/user/discord/login" class="btn btn-outline-secondary btn-rounded w-100">
+                            <img src="../../img/discord-icon.png" class="float-start">
+                            Discord 登入
+                        </a>
+                    </div>
+                    <div class="col-12 mb-3">
+                        <a id='githubLoginBtn' href="/user/github/login" class="btn btn-outline-secondary btn-rounded w-100">
+                            <img src="../../img/github-icon.png" class="float-start">
+                            Github 登入
+                        </a>
+                    </div>
+                    <div class="col-12 mb-3">
+                        <a id='gitlabLoginBtn' href="/user/gitlab/login" class="btn btn-outline-secondary btn-rounded w-100">
+                            <img src="../../img/gitlab-icon.png" class="float-start">
+                            Gitlab 登入
+                        </a>
+                    </div>
+                    <div class="col-12 mb-3">
+                        <a id='twitchLoginBtn' href="/user/twitch/login" class="btn btn-outline-secondary btn-rounded w-100">
+                            <img src="../../img/twitch-icon.png" class="float-start">
+                            Twitch 登入
+                        </a>
+                    </div>
+                    <div class="col-12">
+                        <a id="goBasicLoginBtn" class="btn btn-outline-secondary btn-rounded w-100">
+                            <i class="fa-solid fa-user float-start"></i>
+                            使用一般登入方式
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- Scripts -->
+    <script src="../../js/external/mdb/mdb.min.js"></script>
+    <script src="../../js/external/fontawesome/all.min.js"></script>
+    <script src="../../js/user/login.js"></script>
+</body>
+
+</html>

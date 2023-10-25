@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="stylesheet" href="../../css/external/mdb/mdb.min.css">
+    <link rel="stylesheet" href="../../css/external/fontawesome/all.min.css">
+    <link rel="stylesheet" href="../../css/user/signup.css">
+</head>
+
+<body>
+    <div class="container text-center h-100">
+        <div class="row justify-content-center h-100">
+            <div class="col-10 col-md-8 col-lg-6 col-xl-4 bg-light align-self-center p-4 rounded-3 border shadow-5">
+                <h1 class="mb-4">Signup</h1>
+                <hr class="mb-4">
+                <form id="singupForm">
+                    <div class="row g-3 mb-3" id="basicLoginPage">
+                        <div class="col-6">
+                            <div class="form-outline">
+                                <input type="text" id="lastName" class="form-control form-control-md" />
+                                <label class="form-label" for="loginAct">姓氏</label>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-outline">
+                                <input type="text" id="firstName" class="form-control form-control-md" />
+                                <label class="form-label" for="loginPwd">名字</label>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-outline">
+                                <input type="date" id="birthDate" class="form-control form-control-md" />
+                                <label class="form-label" for="loginAct">生日</label>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-outline">
+                                <input type="email" id="email" class="form-control form-control-md" />
+                                <label class="form-label" for="loginPwd">信箱</label>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-outline">
+                                <input type="text" id="account" class="form-control form-control-md" />
+                                <label class="form-label" for="loginPwd">帳號</label>
+                                <div class="invalid-feedback">請輸入帳號！</div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-outline">
+                                <input type="password" id="password" class="form-control form-control-md" />
+                                <label class="form-label" for="loginPwd">密碼</label>
+                                <div class="invalid-feedback">請輸入密碼！</div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-outline">
+                                <input type="password" id="repeatPassword" class="form-control form-control-md" />
+                                <label class="form-label" for="loginPwd">確認密碼</label>
+                                <div class="invalid-feedback">密碼不一致</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 mb-3">
+                            <div id="infoDiv" class="mb-3 text-danger fw-bold"></div>
+                            <button id="signupBtn" class="btn btn-info btn-rounded w-100">註冊</button>
+                        </div>
+                        <div class="col-12">
+                            <a class="btn btn-outline-secondary btn-rounded w-100" href="/login">
+                                回登入頁面
+                            </a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Scripts -->
+    <script src="../../js/external/mdb/mdb.min.js"></script>
+    <script src="../../js/external/fontawesome/all.min.js"></script>
+    <script src="../../js/user/signup.js"></script>
+</body>
+
+</html>

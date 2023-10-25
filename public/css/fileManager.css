@@ -1,0 +1,35 @@
+#uploadBtn,
+#resetFileBtn {
+    margin: 1rem 0rem;
+}
+
+#fileListTable,
+#fileUploadTable {
+    width: 50rem;
+}
+
+#fileListTable,
+#fileListTable td,
+#fileListTable th {
+    border: 1px solid black;
+    text-align: center;
+}
+
+#deleteBtn,
+#editBtn {
+    margin-left: .5rem;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.container h1{
+    margin: 0;
+}
+.container button{
+    margin-left: auto;
+}

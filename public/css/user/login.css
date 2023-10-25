@@ -1,0 +1,10 @@
+html,
+body {
+    height: 100%;
+    background-color: antiquewhite;
+    font-family: Microsoft JhengHei;
+}
+
+#otherLoginPage img, #otherLoginPage svg {
+    width: 1.3rem;
+}

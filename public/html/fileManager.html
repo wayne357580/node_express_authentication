@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Manager</title>
+    <link rel="stylesheet" type="text/css" href="../css/fileManager.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Upload files</h1>
+        <div>
+            <span id="loginUserSpan"></span>
+            <button id="logoutBtn">登出</button>
+        </div>
+    </div>
+    <table id="fileUploadTable">
+        <tr>
+            <td>
+                選擇單個檔案：<br />
+                <input type="file" id="file">
+            </td>
+            <td>
+                選擇多個檔案：<br />
+                <input type="file" id="files" multiple>
+            </td>
+            <td>
+                選擇資料夾：<br />
+                <input type="file" id="fileDir" webkitdirectory directory multiple>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <input type="button" id="uploadBtn" value="上傳 0 個檔案" disabled>
+                <input type="button" id="resetFileBtn" value="清空檔案">
+            </td>
+        </tr>
+    </table>
+
+    <h1>File list</h1>
+    <table id="fileListTable">
+        <tr>
+            <th>No.</th>
+            <th>檔案名稱</th>
+            <th>檔案大小</th>
+            <th>操作</th>
+        </tr>
+
+    </table>
+
+    <!-- Scripts -->
+    <script src="../js/fileManager.js"></script>
+</body>
+
+</html>
