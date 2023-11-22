@@ -44,8 +44,8 @@ module.exports = (app) => {
         return res.status(404).sendFile(path.join(__dirname, "./public/html/404.html"));
     });
     // Error handler
-    app.use((err, req, res, next) => {
-        logger.error(err.stack)
+    app.use((e, req, res, next) => {
+        logger.error(new Error(e.stack).stack)
         return res.status(500).send('Server error');
     });
 }

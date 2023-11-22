@@ -24,7 +24,7 @@ module.exports = (passport) => {
                     return done(null, user)
                 }
             }).catch(e => {
-                logger.error(e)
+                logger.error(new Error(e.stack).stack)
                 return done(e)
             })
     }
@@ -57,12 +57,12 @@ module.exports = (passport) => {
                             logger.notice(`Created ${user['userType']} ${user['account']}`)
                             return done(null, user);
                         }).catch(e => {
-                            logger.error(e)
+                            logger.error(new Error(e.stack).stack)
                             return done('A server error occurred while creating the user', false)
                         })
                 }
             }).catch(e => {
-                logger.error(e)
+                logger.error(new Error(e.stack).stack)
                 return done(e)
             })
     }));

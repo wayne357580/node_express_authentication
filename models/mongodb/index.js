@@ -6,13 +6,13 @@ const { logger } = require('../logger')
 const { MONGODB_HOST, MONGODB_PORT, MONGODB_DBNAME, MONGODB_USER, MONGODB_PAWD } = process.env
 
 if (!MONGODB_HOST) {
-    logger.error("[MONGODB_HOST] not found in the env parameter")
+    logger.error(new Error("[MONGODB_HOST] not found in the env parameter").stack)
     process.exit()
 } else if (!MONGODB_PORT) {
-    logger.error("[MONGODB_PORT] not found in the env parameter")
+    logger.error(new Error("[MONGODB_PORT] not found in the env parameter").stack)
     process.exit()
 } else if (!MONGODB_DBNAME) {
-    logger.error("[MONGODB_DBNAME] not found in the env parameter")
+    logger.error(new Error("[MONGODB_DBNAME] not found in the env parameter").stack)
     process.exit()
 } else {
     let mongoUrl = `mongodb://`
@@ -41,7 +41,7 @@ if (!MONGODB_HOST) {
         logger.info("Connected to mongodb")
     })
     db.on("error", (e) => {
-        logger.error("Connect mongodb faild :", e)
+        logger.error(new Error(e.stack).stack)
     });
     module.exports = collection
 }

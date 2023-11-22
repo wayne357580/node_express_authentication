@@ -12,7 +12,7 @@ module.exports = async (passport) => {
 
     // Create OIDC issuer
     const oidcIssuer = await Issuer.discover(KeyCloak_OAUTH2_ISSUER).catch(e => {
-        logger.error(`Can't connect KeyCloak oauth server >`, e);
+        logger.error(new Error(`Can't connect KeyCloak oauth server > ${e.stack}`).stack);
         //throw new Error(e)
     })
     if (!oidcIssuer) return
@@ -52,7 +52,7 @@ module.exports = async (passport) => {
                             logger.notice(`Created ${user['userType']} ${user['account']}`)
                             return done('User has not yet activated', false)
                         }).catch(e => {
-                            logger.error(e)
+                            logger.error(new Error(e.stack).stack)
                             return done('A server error occurred while creating the user', false)
                         })
                 } else if (!user.isActivated) {
@@ -64,7 +64,7 @@ module.exports = async (passport) => {
                     return done(null, user)
                 }
             }).catch(e => {
-                logger.error(e)
+                logger.error(new Error(e.stack).stack)
                 return done(e)
             })
     }))

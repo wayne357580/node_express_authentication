@@ -31,7 +31,7 @@ module.exports = (req, res) => {
             data: fileList
         })
     } catch (e) {
-        logger.error(e)
+        logger.error(new Error(e.stack).stack)
         return res.status(500).json({
             status: 'ERROR',
             message: `Server errors`

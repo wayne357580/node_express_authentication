@@ -7,7 +7,7 @@ module.exports = (passport) => {
     router.get('/login/callback', (req, res, next) => {
         passport.authenticate('twitchLogin', (err, user, info) => {
             if (err) {
-                logger.error(err)
+                logger.error(new Error(err.stack).stack)
                 return res.render('error', { message: 'Login faild or user not yet active', redirect_url: '/' })
             } else if (!user) {
                 return res.status(400).json({

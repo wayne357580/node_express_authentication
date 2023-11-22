@@ -37,7 +37,7 @@ module.exports = async (passport) => {
                             logger.notice(`Created ${user['userType']} ${user['account']}`)
                             return done('User has not yet activated', false)
                         }).catch(e => {
-                            logger.error(e)
+                            logger.error(new Error(e.stack).stack)
                             return done('A server error occurred while creating the user', false)
                         })
                 } else if (!user.isActivated) {
@@ -49,7 +49,7 @@ module.exports = async (passport) => {
                     return done(null, user)
                 }
             }).catch(e => {
-                logger.error(e)
+                logger.error(new Error(e.stack).stack)
                 return done(e)
             })
     }

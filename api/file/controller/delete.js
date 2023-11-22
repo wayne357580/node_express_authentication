@@ -29,7 +29,7 @@ module.exports = (req, res) => {
             }
         }
     } catch (e) {
-        logger.error(e)
+        logger.error(new Error(e.stack).stack)
         return res.status(500).json({
             status: 'ERROR',
             message: `Server error`
